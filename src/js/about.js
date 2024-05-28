@@ -7,7 +7,7 @@ import { createCounryInfo } from './updateUI'
 const querySting = window.location.search
 const urlParams = new URLSearchParams(querySting)
 const country = urlParams.get('country')
-const countryAPI = `https://restcountries.com/v3.1/${country}`
+const countryAPI = `https://restcountries.com/v3.1/all${country}`
 
 request(countryAPI).then((data) => {
     createCounryInfo(data[0])
